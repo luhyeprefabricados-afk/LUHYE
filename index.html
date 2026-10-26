@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUHYE E.I.R.L. | Placas y Cercos Prefabricados de Concreto en Perú</title>
+    <meta name="description" content="Especialistas en fabricación e instalación de placas de concreto, postes H y cercos prefabricados perimétricos para terrenos, industrias y residencias en Perú.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        luhye: {
+                            navy: '#0f172a',      // Slate 900
+                            dark: '#1e293b',      // Slate 800
+                            blue: '#1d4ed8',      // Blue 700
+                            blueHover: '#1e40af', // Blue 800
+                            accent: '#f59e0b',    // Amber 500
+                            accentHover: '#d97706',
+                            concrete: '#f1f5f9',  // Slate 100
+                            grayText: '#64748b'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome 6 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(30, 41, 59, 0.88) 100%), 
+                        url('https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+        }
+        .concrete-pattern {
+            background-color: #f8fafc;
+            background-image: radial-gradient(#cbd5e1 0.75px, transparent 0.75px);
+            background-size: 16px 16px;
+        }
+        .modal-active { overflow: hidden; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col">
+
+    <!-- 1. TOP HEADER BAR & MAIN NAVIGATION -->
+    <header class="sticky top-0 z-40 bg-white shadow-md">
+        <!-- Top Bar -->
+        <div class="bg-luhye-navy text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
+            <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+                <div class="flex items-center space-x-6 flex-wrap gap-y-1">
+                    <a href="https://wa.me/51955404551" target="_blank" class="hover:text-luhye-accent transition flex items-center gap-1.5 font-medium">
+                        <i class="fab fa-whatsapp text-emerald-400 text-sm"></i> WhatsApp: +51 955 404 551
+                    </a>
+                    <span class="hidden sm:flex items-center gap-1.5 text-slate-400">
+                        <i class="fas fa-map-marker-alt text-luhye-accent"></i> Cobertura e Instalaciones en Todo el Perú
+                    </span>
+                    <span class="hidden md:flex items-center gap-1.5 text-slate-400">
+                        <i class="fas fa-clock text-luhye-accent"></i> Atenci&oacute;n: Lun - S&aacute;b 8:00 AM - 6:00 PM
+                    </span>
+                </div>
+                <!-- Social Networks -->
+                <div class="flex items-center space-x-4">
+                    <span class="text-slate-400 hidden lg:inline">S&iacute;guenos:</span>
+                    <a href="https://www.facebook.com/share/1CPWvYX4MM/" target="_blank" rel="noopener noreferrer" class="hover:text-luhye-accent transition bg-slate-800 p-1.5 rounded-lg w-7 h-7 flex items-center justify-center" title="Facebook LUHYE E.I.R.L.">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@luhye.e.i.r.l?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" class="hover:text-luhye-accent transition bg-slate-800 p-1.5 rounded-lg w-7 h-7 flex items-center justify-center" title="TikTok LUHYE E.I.R.L.">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Nav -->
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex justify-between items-center">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="bg-luhye-navy text-luhye-accent p-2.5 rounded-xl group-hover:bg-luhye-blue group-hover:text-white transition duration-300 shadow-md">
+                    <i class="fas fa-cubes text-2xl"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-2xl font-black tracking-tight text-luhye-navy leading-none">LUHYE <span class="text-luhye-blue">E.I.R.L.</span></span>
+                    <span class="text-[10px] font-bold tracking-widest text-slate-500 uppercase leading-tight mt-0.5">Cercos & Placas Prefabricadas</span>
+                </div>
+            </a>
+
+            <!-- Nav Links Desktop -->
+            <div class="hidden lg:flex items-center space-x-7 font-semibold text-sm text-slate-700">
+                <a href="#inicio" class="hover:text-luhye-blue transition py-1 border-b-2 border-transparent hover:border-luhye-blue">Inicio</a>
+                <a href="#nosotros" class="hover:text-luhye-blue transition py-1 border-b-2 border-transparent hover:border-luhye-blue">Nosotros</a>
+                <a href="#productos" class="hover:text-luhye-blue transition py-1 border-b-2 border-transparent hover:border-luhye-blue">Productos</a>
+                <a href="#calculadora" class="hover:text-luhye-blue transition py-1 border-b-2 border-transparent hover:border-luhye-blue text-luhye-blue font-bold"><i class="fas fa-calculator mr-1"></i> Calculadora</a>
+                <a href="#proyectos" class="hover:text-luhye-blue transition py-1 border-b-2 border-transparent hover:border-luhye-blue">Obras</a>
+                <a href="#proceso" class="hover:text-luhye-blue transition py-1 border-b-2 border-transparent hover:border-luhye-blue">Proceso</a>
+                <a href="#contacto" class="hover:text-luhye-blue transition py-1 border-b-2 border-transparent hover:border-luhye-blue">Contacto</a>
+            </div>
+
+            <!-- Header CTA -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="https://wa.me/51955404551?text=Hola%20LUHYE%20E.I.R.L.,%20deseo%20solicitar%20una%20cotización%20para%20un%20cerco%20prefabricado." target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-5 py-2.5 rounded-xl shadow-lg shadow-emerald-600/20 transition duration-300 flex items-center gap-2 text-sm">
+                    <i class="fab fa-whatsapp text-lg"></i> Cotizar por WhatsApp
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="mobileMenuBtn" aria-label="Abrir Menú" class="lg:hidden text-luhye-navy text-2xl p-2 rounded-lg hover:bg-slate-100 focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+
+        <!-- Mobile Drawer -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-luhye-navy text-white px-6 py-6 space-y-4 border-t border-slate-800">
+            <a href="#inicio" class="mobile-link block text-base font-medium hover:text-luhye-accent">Inicio</a>
+            <a href="#nosotros" class="mobile-link block text-base font-medium hover:text-luhye-accent">Nosotros</a>
+            <a href="#productos" class="mobile-link block text-base font-medium hover:text-luhye-accent">Productos y Placas</a>
+            <a href="#calculadora" class="mobile-link block text-base font-medium text-luhye-accent font-bold"><i class="fas fa-calculator mr-2"></i>Calculadora de Materiales</a>
+            <a href="#proyectos" class="mobile-link block text-base font-medium hover:text-luhye-accent">Galer&iacute;a de Obras</a>
+            <a href="#proceso" class="mobile-link block text-base font-medium hover:text-luhye-accent">Proceso de Trabajo</a>
+            <a href="#contacto" class="mobile-link block text-base font-medium hover:text-luhye-accent">Contacto</a>
+            
+            <div class="pt-4 border-t border-slate-800 flex flex-col gap-3">
+                <a href="https://wa.me/51955404551?text=Hola%20LUHYE%20E.I.R.L.,%20deseo%20información" target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl text-center flex items-center justify-center gap-2">
+                    <i class="fab fa-whatsapp text-lg"></i> Contactar WhatsApp (955404551)
+                </a>
+                <div class="flex justify-center gap-4 text-xl pt-2 text-slate-300">
+                    <a href="https://www.facebook.com/share/1CPWvYX4MM/" target="_blank" class="hover:text-luhye-accent"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.tiktok.com/@luhye.e.i.r.l?is_from_webapp=1&sender_device=pc" target="_blank" class="hover:text-luhye-accent"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <section id="inicio" class="hero-bg text-white py-16 lg:py-28 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-luhye-blue/30 border border-luhye-blue/50 text-sky-300 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide">
+                        <i class="fas fa-shield-halved text-luhye-accent"></i> FABRICACIÓN E INSTALACIÓN DIRECTA
+                    </div>
+                    
+                    <h1 class="text-3xl sm:text-5xl font-black leading-tight tracking-tight text-white">
+                        Placas & Cercos Prefabricadas de Concreto <span class="text-luhye-accent">LUHYE E.I.R.L.</span>
+                    </h1>
+
+                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl leading-relaxed">
+                        Soluciones estructurales de alta resistencia, rapidez de montaje y economía superior para cerramientos perimétricos de terrenos, almacenes, industrias y residencias en todo el Perú.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="https://wa.me/51955404551?text=Hola%20LUHYE%20E.I.R.L.,%20solicito%20una%20cotizaci%C3%B3n%20para%20un%20cerco%20prefabricado." target="_blank" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-7 py-3.5 rounded-xl shadow-xl transition duration-300 text-center flex items-center justify-center gap-2.5">
+                            <i class="fab fa-whatsapp text-xl"></i> Cotizar por WhatsApp Directo
+                        </a>
+                        <a href="#calculadora" class="w-full sm:w-auto bg-luhye-blue hover:bg-luhye-blueHover text-white font-bold px-7 py-3.5 rounded-xl shadow-lg transition duration-300 text-center flex items-center justify-center gap-2">
+                            <i class="fas fa-calculator"></i> Calcular Materiales
+                        </a>
+                    </div>
+
+                    <!-- Value Propositions Cards -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 border-t border-slate-700/60 mt-8 text-left">
+                        <div class="bg-slate-800/60 p-3 rounded-xl border border-slate-700">
+                            <i class="fas fa-bolt text-luhye-accent text-lg mb-1"></i>
+                            <p class="font-bold text-xs text-white">Instalaci&oacute;n R&aacute;pida</p>
+                            <p class="text-[10px] text-slate-400">Hasta 80m lineales/d&iacute;a</p>
+                        </div>
+                        <div class="bg-slate-800/60 p-3 rounded-xl border border-slate-700">
+                            <i class="fas fa-dumbbell text-luhye-accent text-lg mb-1"></i>
+                            <p class="font-bold text-xs text-white">Concreto f'c 210</p>
+                            <p class="text-[10px] text-slate-400">Resistencia certificada</p>
+                        </div>
+                        <div class="bg-slate-800/60 p-3 rounded-xl border border-slate-700">
+                            <i class="fas fa-piggy-bank text-luhye-accent text-lg mb-1"></i>
+                            <p class="font-bold text-xs text-white">Ahorro hasta 40%</p>
+                            <p class="text-[10px] text-slate-400">vs. Muro tradicional</p>
+                        </div>
+                        <div class="bg-slate-800/60 p-3 rounded-xl border border-slate-700">
+                            <i class="fas fa-truck text-luhye-accent text-lg mb-1"></i>
+                            <p class="font-bold text-xs text-white">Env&iacute;o a Obra</p>
+                            <p class="text-[10px] text-slate-400">Despachos nacionales</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Inquiry Form Card -->
+                <div class="lg:col-span-5">
+                    <div class="bg-white text-slate-800 p-6 sm:p-8 rounded-3xl shadow-2xl border border-slate-100">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="bg-luhye-navy text-luhye-accent p-3 rounded-2xl">
+                                <i class="fas fa-file-signature text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-black text-luhye-navy">Solicita tu Presupuesto</h3>
+                                <p class="text-xs text-slate-500">Respuesta inmediata por nuestros ingenieros</p>
+                            </div>
+                        </div>
+
+                        <form id="heroQuickForm" class="space-y-3.5">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Nombre Completo o Empresa</label>
+                                <input type="text" id="hqName" required placeholder="Ej. Juan Pérez / Constructora" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-luhye-blue text-sm">
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Tel&eacute;fono / WhatsApp</label>
+                                    <input type="tel" id="hqPhone" required placeholder="955 404 551" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-luhye-blue text-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Metros Lineales (Aprox)</label>
+                                    <input type="number" id="hqMeters" placeholder="Ej. 100 m" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-luhye-blue text-sm">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Ubicaci&oacute;n / Ciudad de Obra</label>
+                                <input type="text" id="hqLocation" placeholder="Ej. Lima, Cañete, Ica, Huaral..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-luhye-blue text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Detalles del Requerimiento</label>
+                                <textarea id="hqMsg" rows="2" placeholder="Describa la altura requerida o tipo de terreno..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-luhye-blue text-sm"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 rounded-xl shadow-lg transition duration-300 text-sm flex items-center justify-center gap-2">
+                                <i class="fab fa-whatsapp text-lg"></i> Enviar Mensaje a WhatsApp
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. ABOUT US & QUALITY GUARANTEE -->
+    <section id="nosotros" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 relative">
+                    <div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-100">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1000&auto=format&fit=crop" alt="Fabricación de placas prefabricadas LUHYE E.I.R.L." class="w-full h-auto object-cover">
+                    </div>
+                    <!-- Experience Floating Badge -->
+                    <div class="absolute -bottom-6 -right-6 bg-luhye-navy text-white p-6 rounded-2xl shadow-xl z-20 hidden sm:block max-w-xs border-2 border-luhye-accent">
+                        <p class="text-3xl font-extrabold text-luhye-accent">LUHYE E.I.R.L.</p>
+                        <p class="text-xs font-semibold mt-1 text-slate-300">Garant&iacute;a de Calidad en Concreto Armado y Montaje Profesional</p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-xs font-bold text-luhye-blue uppercase tracking-widest">Sobre LUHYE E.I.R.L.</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-luhye-navy leading-tight">
+                        L&iacute;deres en Fabricaci&oacute;n e Instalaci&oacute;n de Placas y Postes de Concreto
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                        En **LUHYE E.I.R.L.** nos dedicamos a la fabricación de elementos prefabricados de concreto armado de alta calidad. Suministramos e instalamos sistemas perimétricos diseñados para ofrecer máxima seguridad, privacidad y durabilidad frente a las condiciones climáticas del Perú.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                        <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200">
+                            <i class="fas fa-layer-group text-luhye-blue text-2xl mb-2"></i>
+                            <h3 class="font-bold text-slate-800 text-sm">Varios Modelos y Alturas</h3>
+                            <p class="text-xs text-slate-500 mt-1">Placas lisas, símil ladrillo y decorativas desde 2.00m hasta 3.00m de altura.</p>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200">
+                            <i class="fas fa-shield-alt text-luhye-accent text-2xl mb-2"></i>
+                            <h3 class="font-bold text-slate-800 text-sm">Resistencia Controlada</h3>
+                            <p class="text-xs text-slate-500 mt-1">Acero de refuerzo y concreto f'c 210 kg/cm² con curado a vapor y control estricto.</p>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200">
+                            <i class="fas fa-truck-ramp-box text-emerald-600 text-2xl mb-2"></i>
+                            <h3 class="font-bold text-slate-800 text-sm">Servicio Integral</h3>
+                            <p class="text-xs text-slate-500 mt-1">Nos encargamos de la fabricación, transporte, excavación y montaje completo en obra.</p>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200">
+                            <i class="fas fa-handshake text-indigo-600 text-2xl mb-2"></i>
+                            <h3 class="font-bold text-slate-800 text-sm">Atenci&oacute;n Directa</h3>
+                            <p class="text-xs text-slate-500 mt-1">Trato directo con el fabricante sin intermediarios. Cotizaciones rápidas.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. PRODUCTS & SERVICES CATALOG -->
+    <section id="productos" class="py-20 concrete-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-bold text-luhye-blue uppercase tracking-widest">Cat&aacute;logo de Productos</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-luhye-navy mt-1">Placas y Sistemas de Cercos Prefabricados</h2>
+                <p class="text-slate-600 mt-3 text-sm sm:text-base">Seleccione el tipo de cerco o producto que necesita para su terreno o proyecto industrial.</p>
+            </div>
+
+            <!-- Product Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 mb-10">
+                <button class="prod-filter active-prod-btn px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition bg-luhye-navy text-white" data-cat="all">Todos los Productos</button>
+                <button class="prod-filter px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition bg-white text-slate-700 hover:bg-slate-100 border border-slate-200" data-cat="placas">Placas de Concreto</button>
+                <button class="prod-filter px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition bg-white text-slate-700 hover:bg-slate-100 border border-slate-200" data-cat="postes">Postes H de Concreto</button>
+                <button class="prod-filter px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition bg-white text-slate-700 hover:bg-slate-100 border border-slate-200" data-cat="cercos">Cercos Instalados</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div id="productsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Dynamically rendered via JS -->
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 5. INTERACTIVE FENCE CALCULATOR -->
+    <section id="calculadora" class="py-20 bg-luhye-navy text-white relative">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-10">
+                <span class="bg-luhye-accent/20 text-luhye-accent text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full border border-luhye-accent/40">
+                    <i class="fas fa-calculator mr-1"></i> Herramienta Interactiva
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-black mt-3">Calculadora de Materiales para Cercos</h2>
+                <p class="text-slate-300 text-sm sm:text-base mt-2">Estime la cantidad de placas y postes que requiere según el metrado de su terreno.</p>
+            </div>
+
+            <div class="bg-white text-slate-800 p-6 sm:p-10 rounded-3xl shadow-2xl">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                    
+                    <!-- Controls -->
+                    <div class="lg:col-span-7 space-y-6">
+                        <!-- Step 1: Meters -->
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <label class="text-xs font-bold text-slate-700 uppercase">1. Metros Lineales del Terreno</label>
+                                <span class="text-luhye-blue font-extrabold text-lg" id="calcMetersDisp">50 Metros</span>
+                            </div>
+                            <input type="range" id="calcMeters" min="10" max="500" step="5" value="50" class="w-full h-2.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-luhye-blue">
+                            <div class="flex justify-between text-xs text-slate-400 mt-1">
+                                <span>10m</span>
+                                <span>250m</span>
+                                <span>500m</span>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Height -->
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-2">2. Altura Deseada del Cerco</label>
+                            <div class="grid grid-cols-3 gap-3">
+                                <label class="border-2 border-slate-200 rounded-xl p-3 text-center cursor-pointer hover:border-luhye-blue transition height-btn active-height bg-slate-50">
+                                    <input type="radio" name="calcHeight" value="2.0" class="hidden" checked>
+                                    <span class="block font-black text-slate-800 text-sm">2.00 Metros</span>
+                                    <span class="block text-[10px] text-slate-500">4 Placas / TRAMO</span>
+                                </label>
+                                <label class="border-2 border-slate-200 rounded-xl p-3 text-center cursor-pointer hover:border-luhye-blue transition height-btn bg-slate-50">
+                                    <input type="radio" name="calcHeight" value="2.5" class="hidden">
+                                    <span class="block font-black text-slate-800 text-sm">2.50 Metros</span>
+                                    <span class="block text-[10px] text-slate-500">5 Placas / TRAMO</span>
+                                </label>
+                                <label class="border-2 border-slate-200 rounded-xl p-3 text-center cursor-pointer hover:border-luhye-blue transition height-btn bg-slate-50">
+                                    <input type="radio" name="calcHeight" value="3.0" class="hidden">
+                                    <span class="block font-black text-slate-800 text-sm">3.00 Metros</span>
+                                    <span class="block text-[10px] text-slate-500">6 Placas / TRAMO</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Type of Plate -->
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-2">3. Acabado de la Placa</label>
+                            <select id="calcPlateType" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-luhye-blue font-semibold text-sm bg-white">
+                                <option value="Placa Lisa Estándar">Placa Lisa de Concreto Armado (Estándar)</option>
+                                <option value="Placa Símil Ladrillo">Placa Símil Ladrillo Decorativa</option>
+                                <option value="Cerco con Concertina">Cerco de Seguridad (Incluye Concertina)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Summary Output -->
+                    <div class="lg:col-span-5 bg-slate-50 p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-sm font-black text-luhye-navy uppercase tracking-wider mb-4 border-b border-slate-200 pb-2 flex items-center justify-between">
+                                <span>C&aacute;lculo de Materiales</span>
+                                <i class="fas fa-cubes text-luhye-accent"></i>
+                            </h3>
+
+                            <div class="space-y-3.5 text-sm">
+                                <div class="flex justify-between items-center bg-white p-2.5 rounded-xl border border-slate-200">
+                                    <span class="text-xs text-slate-600 font-medium">Placas de Concreto:</span>
+                                    <span class="font-extrabold text-luhye-navy text-base" id="resPlates">100 Unidades</span>
+                                </div>
+                                <div class="flex justify-between items-center bg-white p-2.5 rounded-xl border border-slate-200">
+                                    <span class="text-xs text-slate-600 font-medium">Postes H de Concreto:</span>
+                                    <span class="font-extrabold text-luhye-navy text-base" id="resPosts">26 Unidades</span>
+                                </div>
+                                <div class="flex justify-between items-center bg-white p-2.5 rounded-xl border border-slate-200">
+                                    <span class="text-xs text-slate-600 font-medium">Puntos de Cimentaci&oacute;n:</span>
+                                    <span class="font-extrabold text-luhye-navy text-base" id="resFoundation">26 Excavaciones</span>
+                                </div>
+                            </div>
+
+                            <div class="mt-6 p-3 bg-amber-50 rounded-xl border border-amber-200 text-xs text-amber-800">
+                                <p class="font-bold flex items-center gap-1.5"><i class="fas fa-info-circle text-amber-600"></i> Nota de Suministro:</p>
+                                <p class="mt-0.5 text-[11px] leading-tight">Cálculo referencial en tramos de 2.00m. Incluye asesoría de instalación por LUHYE E.I.R.L.</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-6">
+                            <button id="sendCalcToWA" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 rounded-xl shadow-lg transition duration-300 text-sm flex items-center justify-center gap-2">
+                                <i class="fab fa-whatsapp text-lg"></i> Solicitar Cotizaci&oacute;n con este C&aacute;lculo
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. PROJECTS GALLERY -->
+    <section id="proyectos" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-bold text-luhye-blue uppercase tracking-widest">Garant&iacute;a en Campo</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-luhye-navy mt-1">Galer&iacute;a de Obras y Proyectos Ejecutados</h2>
+                <p class="text-slate-600 mt-3 text-sm sm:text-base">Muestras reales de nuestros cercos perimétricos instalados en diversos puntos del país.</p>
+            </div>
+
+            <!-- Gallery Filter -->
+            <div class="flex justify-center gap-2 mb-10 flex-wrap">
+                <button class="proj-filter active-proj-btn px-5 py-2 rounded-xl text-xs sm:text-sm font-bold transition bg-luhye-navy text-white" data-proj="all">Todas las Obras</button>
+                <button class="proj-filter px-5 py-2 rounded-xl text-xs sm:text-sm font-bold transition bg-slate-100 text-slate-700 hover:bg-slate-200" data-proj="terrenos">Terrenos / Lotes</button>
+                <button class="proj-filter px-5 py-2 rounded-xl text-xs sm:text-sm font-bold transition bg-slate-100 text-slate-700 hover:bg-slate-200" data-proj="industrial">Industriales / Almacenes</button>
+                <button class="proj-filter px-5 py-2 rounded-xl text-xs sm:text-sm font-bold transition bg-slate-100 text-slate-700 hover:bg-slate-200" data-proj="residencial">Residenciales</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div id="projectsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Dynamically rendered via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. WORK PROCESS -->
+    <section id="proceso" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold text-luhye-blue uppercase tracking-widest">Paso a Paso</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-luhye-navy mt-1">Nuestro Proceso de Trabajo</h2>
+                <p class="text-slate-600 mt-3 text-sm sm:text-base">Garantizamos rapidez, orden y cumplimiento en cada etapa del proyecto.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 relative group hover:-translate-y-1 transition duration-300">
+                    <div class="w-12 h-12 bg-luhye-navy text-luhye-accent font-black text-xl rounded-2xl flex items-center justify-center mb-4">1</div>
+                    <h3 class="font-bold text-slate-800 text-base mb-2">Asesor&iacute;a y Medici&oacute;n</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">Evaluamos el metrado de su terreno, accesos y tipo de suelo para recomendar la altura ideal.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 relative group hover:-translate-y-1 transition duration-300">
+                    <div class="w-12 h-12 bg-luhye-navy text-luhye-accent font-black text-xl rounded-2xl flex items-center justify-center mb-4">2</div>
+                    <h3 class="font-bold text-slate-800 text-base mb-2">Fabricaci&oacute;n Controlada</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">Procesamos las placas y postes de concreto con acero de refuerzo y concreto de alta resistencia.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 relative group hover:-translate-y-1 transition duration-300">
+                    <div class="w-12 h-12 bg-luhye-navy text-luhye-accent font-black text-xl rounded-2xl flex items-center justify-center mb-4">3</div>
+                    <h3 class="font-bold text-slate-800 text-base mb-2">Transporte a Obra</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">Traslado seguro de los elementos prefabricados directamente al punto de instalación.</p>
+                </div>
+                <!-- Step 4 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 relative group hover:-translate-y-1 transition duration-300">
+                    <div class="w-12 h-12 bg-emerald-600 text-white font-black text-xl rounded-2xl flex items-center justify-center mb-4">4</div>
+                    <h3 class="font-bold text-slate-800 text-base mb-2">Montaje y Entrega</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed">Excavación, aplomado de postes H, emboquillado de placas y entrega final del cerco terminado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FAQ SECTION -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-xs font-bold text-luhye-blue uppercase tracking-widest">Resuelve tus Dudas</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-luhye-navy mt-1">Preguntas Frecuentes</h2>
+            </div>
+
+            <div class="space-y-4" id="faqAccordion">
+                <!-- FAQ 1 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                    <button class="faq-btn w-full p-5 text-left font-bold text-slate-800 flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition text-sm sm:text-base">
+                        <span>¿Cuál es la ventaja de un cerco prefabricado frente a un muro de ladrillo tradicional?</span>
+                        <i class="fas fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div class="faq-content p-5 text-xs sm:text-sm text-slate-600 border-t border-slate-200 hidden bg-white leading-relaxed">
+                        El cerco prefabricado se instala hasta 5 veces más rápido, reduce el costo total hasta en un 40% (ahorro en mano de obra, tarrajeo y tiempo), no requiere sobrecimiento continuo en todo el tramo y ofrece resistencia sísmica e impermeable garantizada.
+                    </div>
+                </div>
+                <!-- FAQ 2 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                    <button class="faq-btn w-full p-5 text-left font-bold text-slate-800 flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition text-sm sm:text-base">
+                        <span>¿Hacen envíos e instalaciones a provincias fuera de Lima?</span>
+                        <i class="fas fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div class="faq-content p-5 text-xs sm:text-sm text-slate-600 border-t border-slate-200 hidden bg-white leading-relaxed">
+                        Sí, en **LUHYE E.I.R.L.** despachamos placas y postes a nivel nacional. Podemos cotizar solo el suministro de material puesto en obra o el servicio integral de instalación con nuestra cuadrilla especializada.
+                    </div>
+                </div>
+                <!-- FAQ 3 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                    <button class="faq-btn w-full p-5 text-left font-bold text-slate-800 flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition text-sm sm:text-base">
+                        <span>¿Cuáles son las medidas estándar de las placas y postes?</span>
+                        <i class="fas fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div class="faq-content p-5 text-xs sm:text-sm text-slate-600 border-t border-slate-200 hidden bg-white leading-relaxed">
+                        Nuestras placas estándar miden 2.00m de largo por 0.50m de alto (con grosor de 4.5cm a 5cm). Los postes H de concreto armado se fabrican con la longitud adecuada para enterrarse entre 0.60m y 0.80m en el suelo según la altura total del cerco.
+                    </div>
+                </div>
+                <!-- FAQ 4 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                    <button class="faq-btn w-full p-5 text-left font-bold text-slate-800 flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition text-sm sm:text-base">
+                        <span>¿Cómo solicito una cotización formal?</span>
+                        <i class="fas fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div class="faq-content p-5 text-xs sm:text-sm text-slate-600 border-t border-slate-200 hidden bg-white leading-relaxed">
+                        Puede escribirnos directamente al WhatsApp **955 404 551** indicando los metros lineales aproximados de su terreno y la ubicación del proyecto. Le enviaremos un presupuesto detallado de inmediato.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. CONTACT & LOCATION SECTION -->
+    <section id="contacto" class="py-20 bg-slate-900 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Info -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <span class="text-xs font-bold text-luhye-accent uppercase tracking-widest">Contacto Directo</span>
+                        <h2 class="text-3xl font-black mt-1">LUHYE E.I.R.L.</h2>
+                        <p class="text-slate-400 text-sm mt-3">Atención comercial e ingeniería para la cotización y coordinación de proyectos de cerramiento en todo el Perú.</p>
+                    </div>
+
+                    <div class="space-y-4 pt-2">
+                        <a href="https://wa.me/51955404551" target="_blank" class="flex items-start gap-4 p-4 rounded-2xl bg-slate-800/80 border border-slate-700 hover:border-emerald-500 transition group">
+                            <div class="bg-emerald-600 text-white p-3 rounded-xl"><i class="fab fa-whatsapp text-2xl"></i></div>
+                            <div>
+                                <h3 class="font-bold text-white text-sm">WhatsApp / Celular</h3>
+                                <p class="text-emerald-400 font-extrabold text-base mt-0.5">+51 955 404 551</p>
+                                <p class="text-[11px] text-slate-400">Atención rápida y envío de fotos/videos de obras</p>
+                            </div>
+                        </a>
+
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-800/80 border border-slate-700">
+                            <div class="bg-luhye-blue text-white p-3 rounded-xl"><i class="fas fa-share-nodes text-xl"></i></div>
+                            <div>
+                                <h3 class="font-bold text-white text-sm">Nuestras Redes Sociales</h3>
+                                <div class="flex items-center gap-3 mt-2">
+                                    <a href="https://www.facebook.com/share/1CPWvYX4MM/" target="_blank" rel="noopener noreferrer" class="bg-slate-700 hover:bg-luhye-blue px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1.5 transition">
+                                        <i class="fab fa-facebook"></i> Facebook
+                                    </a>
+                                    <a href="https://www.tiktok.com/@luhye.e.i.r.l?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" class="bg-slate-700 hover:bg-pink-600 px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1.5 transition">
+                                        <i class="fab fa-tiktok"></i> TikTok
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-800/80 border border-slate-700">
+                            <div class="bg-luhye-navy text-luhye-accent p-3 rounded-xl"><i class="fas fa-truck-fast text-xl"></i></div>
+                            <div>
+                                <h3 class="font-bold text-white text-sm">Cobertura de Atenci&oacute;n</h3>
+                                <p class="text-xs text-slate-300 mt-0.5">Lima Metropolitana, Lima Provincias y Envíos a Nivel Nacional en Perú.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="lg:col-span-7 bg-white text-slate-800 p-8 rounded-3xl shadow-2xl">
+                    <h3 class="text-2xl font-black text-luhye-navy mb-1">Formulario de Cotizaci&oacute;n</h3>
+                    <p class="text-xs text-slate-500 mb-6">Complete sus datos para enviar la solicitud pre-llenada directamente al WhatsApp de la empresa.</p>
+
+                    <form id="contactMainForm" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Nombre Completo *</label>
+                                <input type="text" id="cmName" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-luhye-blue text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Tel&eacute;fono / WhatsApp *</label>
+                                <input type="tel" id="cmPhone" required placeholder="955404551" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-luhye-blue text-sm">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Metros Lineales Aproximados</label>
+                                <input type="number" id="cmMeters" placeholder="Ej. 120" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-luhye-blue text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Ubicaci&oacute;n de la Obra</label>
+                                <input type="text" id="cmLocation" placeholder="Ciudad o Distrito" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-luhye-blue text-sm">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Tipo de Servicio Requerido</label>
+                            <select id="cmService" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-luhye-blue text-sm bg-white">
+                                <option value="Suministro e Instalación Completa">Suministro de Placas/Postes e Instalación Completa en Obra</option>
+                                <option value="Solo Venta y Despacho de Placas">Solo Venta y Despacho de Placas / Postes</option>
+                                <option value="Cerco con Concertina de Seguridad">Cerco Perimétrico con Concertina de Seguridad</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Mensaje o Detalle Adicional</label>
+                            <textarea id="cmMsg" rows="3" placeholder="Escriba aquí los detalles sobre la altura del cerco o características de su terreno..." class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-luhye-blue text-sm"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 rounded-xl shadow-lg transition duration-300 text-sm flex items-center justify-center gap-2">
+                            <i class="fab fa-whatsapp text-xl"></i> Enviar Cotización a WhatsApp (955404551)
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-luhye-navy text-slate-400 text-xs py-12 border-t border-slate-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            
+            <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                    <div class="bg-luhye-blue text-white p-2 rounded-xl"><i class="fas fa-cubes text-xl"></i></div>
+                    <span class="text-xl font-black text-white tracking-tight">LUHYE E.I.R.L.</span>
+                </div>
+                <p class="leading-relaxed">Especialistas en la fabricación e instalación de placas de concreto armado, postes H y soluciones integrales de cercos prefabricados perimétricos en el Perú.</p>
+                <div class="flex gap-3 text-slate-300 text-base pt-1">
+                    <a href="https://www.facebook.com/share/1CPWvYX4MM/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-luhye-blue hover:text-white transition" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@luhye.e.i.r.l?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-pink-600 hover:text-white transition" title="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://wa.me/51955404551" target="_blank" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-emerald-500 hover:text-white transition" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-white font-bold uppercase tracking-wider text-sm mb-4 border-b border-slate-800 pb-2">Productos</h3>
+                <ul class="space-y-2">
+                    <li><a href="#productos" class="hover:text-luhye-accent transition">Placas Lisas de Concreto Armado</a></li>
+                    <li><a href="#productos" class="hover:text-luhye-accent transition">Placas Decorativas Símil Ladrillo</a></li>
+                    <li><a href="#productos" class="hover:text-luhye-accent transition">Postes H de Concreto Perimétrico</a></li>
+                    <li><a href="#productos" class="hover:text-luhye-accent transition">Cercos para Terrenos e Industria</a></li>
+                    <li><a href="#productos" class="hover:text-luhye-accent transition">Cercos con Concertina de Seguridad</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-white font-bold uppercase tracking-wider text-sm mb-4 border-b border-slate-800 pb-2">Navegaci&oacute;n</h3>
+                <ul class="space-y-2">
+                    <li><a href="#inicio" class="hover:text-luhye-accent transition">Inicio</a></li>
+                    <li><a href="#nosotros" class="hover:text-luhye-accent transition">Nosotros</a></li>
+                    <li><a href="#calculadora" class="hover:text-luhye-accent transition">Calculadora de Materiales</a></li>
+                    <li><a href="#proyectos" class="hover:text-luhye-accent transition">Galería de Obras</a></li>
+                    <li><a href="#contacto" class="hover:text-luhye-accent transition">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-white font-bold uppercase tracking-wider text-sm mb-4 border-b border-slate-800 pb-2">Contacto Directo</h3>
+                <div class="space-y-2">
+                    <p class="text-slate-300 font-semibold"><i class="fab fa-whatsapp text-emerald-400 mr-2"></i> +51 955 404 551</p>
+                    <p class="text-slate-300"><i class="fas fa-building mr-2"></i> LUHYE E.I.R.L.</p>
+                    <p class="text-slate-400 text-[11px] mt-2">Atención a contratistas, empresas de construcción y propietarios de terrenos particulares.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-800 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-[11px] text-slate-500">
+            <p>&copy; 2026 LUHYE E.I.R.L. Todos los derechos reservados.</p>
+            <p>Sitio web optimizado para GitHub Pages.</p>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/51955404551?text=Hola%20LUHYE%20E.I.R.L.,%20deseo%20mayor%20informaci%C3%B3n%20y%20cotizaci%C3%B3n%20de%20cercos." target="_blank" aria-label="WhatsApp LUHYE" class="fixed bottom-6 right-6 bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl z-50 hover:scale-110 transition duration-300">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- DETAIL MODAL LIGHTBOX -->
+    <div id="detailModal" class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 shadow-2xl relative">
+            <button id="closeModalBtn" aria-label="Cerrar modal" class="absolute top-5 right-5 text-slate-400 hover:text-slate-700 text-2xl font-bold">
+                <i class="fas fa-times"></i>
+            </button>
+            <div id="modalContent">
+                <!-- Injected dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // --- PRODUCTS DATA ---
+        const productsData = [
+            {
+                id: 'p1',
+                category: 'placas',
+                title: 'Placa Lisa de Concreto Armado',
+                image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=600&auto=format&fit=crop',
+                shortDesc: 'Placa prefabricada estándar lisa de f\'c 210 kg/cm² con malla de acero de refuerzo.',
+                measures: '2.00m largo x 0.50m alto x 4.5cm espesor',
+                features: ['Alta resistencia sísmica', 'Superficie uniforme', 'Fácil traslado'],
+                fullDesc: 'La placa lisa es la solución preferida para cerramientos perimétricos industriales y terrenos. Fabricada con insumos seleccionados y acero de alta tenacidad que previene fisuras.'
+            },
+            {
+                id: 'p2',
+                category: 'placas',
+                title: 'Placa Símil Ladrillo Decorativa',
+                image: 'https://images.unsplash.com/photo-1590069261209-f8e9b8642343?q=80&w=600&auto=format&fit=crop',
+                shortDesc: 'Placa de concreto grabado con textura tipo ladrillo caravista para acabado estético superior.',
+                measures: '2.00m largo x 0.50m alto x 5.0cm espesor',
+                features: ['Acabado caravista sin tarrajeo', 'Elegancia para residencias', 'Durabilidad extrema'],
+                fullDesc: 'Ideal para condominios, viviendas y fachadas. Aporta un acabado arquitectónico sofisticado sin necesidad de gastar en tarrajeo ni pintura adicional.'
+            },
+            {
+                id: 'p3',
+                category: 'postes',
+                title: 'Poste H de Concreto Armado',
+                image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=600&auto=format&fit=crop',
+                shortDesc: 'Postes con canudillo longitudinal tipo H para encaje preciso de las placas de concreto.',
+                measures: 'Alturas de 2.60m, 3.20m y 3.80m',
+                features: ['Encaje perfecto de placas', 'Refuerzo de 4 varillas de acero', 'Resistencia a vientos de alta velocidad'],
+                fullDesc: 'Elemento vertical clave en la estructura. Su diseño en sección "H" facilita el ensamble directo de las placas superpuestas garantizando aplomado y rigidez.'
+            },
+            {
+                id: 'p4',
+                category: 'cercos',
+                title: 'Cerco Perimétrico para Terrenos y Lotes',
+                image: 'https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?q=80&w=600&auto=format&fit=crop',
+                shortDesc: 'Instalación completa de cercado rápido para delimitación de predios agrícolas e industriales.',
+                measures: 'Alturas desde 2.00m hasta 3.00m',
+                features: ['Protección inmediata contra invasiones', 'Cero mantenimiento', 'Instalación express'],
+                fullDesc: 'Servicio de cercado perimétrico rápido. Proteja su propiedad y evite ocupaciones informales con un cerco rígido de concreto de larga vida útil.'
+            },
+            {
+                id: 'p5',
+                category: 'cercos',
+                title: 'Cerco de Alta Seguridad con Concertina',
+                image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=600&auto=format&fit=crop',
+                shortDesc: 'Cerco prefabricado complementado con postes biselados superiores y alambre concertina o de púas.',
+                measures: 'Altura de 2.50m o 3.00m + Concertina 18"',
+                features: ['Máxima disuasión perimétrica', 'Ideal para almacenes', 'Acero galvanizado'],
+                fullDesc: 'Combinación de cerco ciego de concreto prefabricado con sistemas superiores de seguridad para plantas industriales y almacenes de valor.'
+            }
+        ];
+
+        // --- PROJECTS DATA ---
+        const projectsData = [
+            {
+                id: 'pr1',
+                category: 'terrenos',
+                title: 'Cerramiento de Terreno de 250m Lineales',
+                image: 'https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?q=80&w=600&auto=format&fit=crop',
+                desc: 'Instalación de cerco prefabricado de 2.50m de altura para terreno industrial. Proyecto entregado en 4 días hábiles.'
+            },
+            {
+                id: 'pr2',
+                category: 'industrial',
+                title: 'Cerco Perimétrico para Almacén en Lurín',
+                image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=600&auto=format&fit=crop',
+                desc: 'Instalación de placas lisas y postes H con concertina superior para cerramiento de almacén logístico.'
+            },
+            {
+                id: 'pr3',
+                category: 'residencial',
+                title: 'Cerco Símil Ladrillo para Residencia',
+                image: 'https://images.unsplash.com/photo-1590069261209-f8e9b8642343?q=80&w=600&auto=format&fit=crop',
+                desc: 'Montaje de cerco con placas de acabado ladrillo caravista de 2.00m de altura para cerramiento estético de casa de campo.'
+            }
+        ];
+
+        // --- RENDER PRODUCTS ---
+        function renderProducts(category = 'all') {
+            const grid = document.getElementById('productsGrid');
+            grid.innerHTML = '';
+
+            const filtered = productsData.filter(p => category === 'all' || p.category === category);
+
+            filtered.forEach(prod => {
+                const card = document.createElement('div');
+                card.className = 'bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition duration-300 flex flex-col group';
+                card.innerHTML = `
+                    <div class="relative h-52 overflow-hidden bg-slate-100">
+                        <img src="${prod.image}" alt="${prod.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute top-3 left-3 bg-luhye-navy text-luhye-accent text-xs font-extrabold px-3 py-1 rounded-full shadow-md">
+                            LUHYE E.I.R.L.
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-lg font-bold text-luhye-navy group-hover:text-luhye-blue transition mb-2">${prod.title}</h3>
+                            <p class="text-xs text-slate-500 mb-3">${prod.shortDesc}</p>
+                            <p class="text-[11px] font-semibold text-slate-700 bg-slate-100 p-2 rounded-lg mb-4">
+                                <i class="fas fa-ruler-combined text-luhye-blue mr-1"></i> ${prod.measures}
+                            </p>
+                        </div>
+                        <div class="space-y-2 pt-2 border-t border-slate-100">
+                            <button onclick="openProductModal('${prod.id}')" class="w-full bg-slate-100 hover:bg-luhye-navy hover:text-white text-slate-800 font-bold py-2.5 rounded-xl text-xs transition flex items-center justify-center gap-2">
+                                <i class="fas fa-eye"></i> Ver Ficha T&eacute;cnica
+                            </button>
+                            <a href="https://wa.me/51955404551?text=Hola%20LUHYE%20E.I.R.L.,%20deseo%20cotizar:%20${encodeURIComponent(prod.title)}" target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 rounded-xl text-xs transition flex items-center justify-center gap-2">
+                                <i class="fab fa-whatsapp"></i> Cotizar Producto
+                            </a>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // --- RENDER PROJECTS ---
+        function renderProjects(category = 'all') {
+            const grid = document.getElementById('projectsGrid');
+            grid.innerHTML = '';
+
+            const filtered = projectsData.filter(p => category === 'all' || p.category === category);
+
+            filtered.forEach(p => {
+                const card = document.createElement('div');
+                card.className = 'bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition group cursor-pointer';
+                card.innerHTML = `
+                    <div class="relative h-60 overflow-hidden">
+                        <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-luhye-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                            <span class="text-white text-xs font-semibold"><i class="fas fa-search-plus mr-1"></i> Ver obra ampliada</span>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-slate-800 text-base mb-1">${p.title}</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">${p.desc}</p>
+                    </div>
+                `;
+                card.onclick = () => openProjectModal(p);
+                grid.appendChild(card);
+            });
+        }
+
+        // --- MODAL SYSTEM ---
+        function openProductModal(id) {
+            const p = productsData.find(item => item.id === id);
+            if(!p) return;
+
+            const modalContent = document.getElementById('modalContent');
+            modalContent.innerHTML = `
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="bg-luhye-navy text-luhye-accent p-3 rounded-2xl"><i class="fas fa-cubes text-xl"></i></div>
+                    <div>
+                        <span class="text-[10px] font-bold text-luhye-blue uppercase">Ficha de Producto</span>
+                        <h3 class="text-xl font-black text-luhye-navy">${p.title}</h3>
+                    </div>
+                </div>
+                <img src="${p.image}" class="w-full h-52 object-cover rounded-2xl mb-4">
+                <p class="text-xs text-slate-600 leading-relaxed mb-4">${p.fullDesc}</p>
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 mb-6 space-y-2">
+                    <p class="text-xs font-bold text-slate-800 uppercase">Especificaciones:</p>
+                    <p class="text-xs text-slate-600"><strong class="text-slate-800">Dimensiones:</strong> ${p.measures}</p>
+                    <p class="text-xs text-slate-600"><strong class="text-slate-800">Calidad:</strong> Concreto armado f'c 210 kg/cm²</p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <a href="https://wa.me/51955404551?text=Hola%20LUHYE%20E.I.R.L.,%20solicito%20cotización%20del%20producto:%20${encodeURIComponent(p.title)}" target="_blank" class="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl text-center text-xs flex items-center justify-center gap-2">
+                        <i class="fab fa-whatsapp text-lg"></i> Cotizar vía WhatsApp
+                    </a>
+                </div>
+            `;
+            document.getElementById('detailModal').classList.remove('hidden');
+            document.body.classList.add('modal-active');
+        }
+
+        function openProjectModal(p) {
+            const modalContent = document.getElementById('modalContent');
+            modalContent.innerHTML = `
+                <h3 class="text-xl font-black text-luhye-navy mb-3">${p.title}</h3>
+                <img src="${p.image}" class="w-full h-64 object-cover rounded-2xl mb-4">
+                <p class="text-xs text-slate-600 leading-relaxed mb-6">${p.desc}</p>
+                <button onclick="closeModal()" class="w-full bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold py-2.5 rounded-xl text-xs">
+                    Cerrar
+                </button>
+            `;
+            document.getElementById('detailModal').classList.remove('hidden');
+            document.body.classList.add('modal-active');
+        }
+
+        function closeModal() {
+            document.getElementById('detailModal').classList.add('hidden');
+            document.body.classList.remove('modal-active');
+        }
+
+        // --- FENCE CALCULATOR LOGIC ---
+        function calculateFence() {
+            const meters = parseInt(document.getElementById('calcMeters').value);
+            const selectedHeightEl = document.querySelector('input[name="calcHeight"]:checked');
+            const height = parseFloat(selectedHeightEl ? selectedHeightEl.value : 2.0);
+            const plateType = document.getElementById('calcPlateType').value;
+
+            // Calculations based on standard 2.00m spans
+            const posts = Math.ceil(meters / 2) + 1;
+            const platesPerSection = Math.round(height / 0.5); // Each plate is 0.50m height
+            const totalPlates = Math.ceil(meters / 2) * platesPerSection;
+            const foundations = posts;
+
+            document.getElementById('calcMetersDisp').innerText = `${meters} Metros`;
+            document.getElementById('resPlates').innerText = `${totalPlates} Unidades`;
+            document.getElementById('resPosts').innerText = `${posts} Unidades`;
+            document.getElementById('resFoundation').innerText = `${foundations} Puntos`;
+
+            window.currentCalcState = {
+                meters: meters,
+                height: `${height.toFixed(2)}m`,
+                plateType: plateType,
+                plates: totalPlates,
+                posts: posts
+            };
+        }
+
+        // --- INITIALIZATION ---
+        window.onload = function() {
+            renderProducts();
+            renderProjects();
+            calculateFence();
+
+            // Mobile menu toggle
+            document.getElementById('mobileMenuBtn').onclick = () => {
+                document.getElementById('mobileMenu').classList.toggle('hidden');
+            };
+
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                link.onclick = () => document.getElementById('mobileMenu').classList.add('hidden');
+            });
+
+            // Product Filters
+            document.querySelectorAll('.prod-filter').forEach(btn => {
+                btn.onclick = (e) => {
+                    document.querySelectorAll('.prod-filter').forEach(b => {
+                        b.classList.remove('bg-luhye-navy', 'text-white');
+                        b.classList.add('bg-white', 'text-slate-700');
+                    });
+                    e.target.classList.add('bg-luhye-navy', 'text-white');
+                    e.target.classList.remove('bg-white', 'text-slate-700');
+                    renderProducts(e.target.getAttribute('data-cat'));
+                };
+            });
+
+            // Project Filters
+            document.querySelectorAll('.proj-filter').forEach(btn => {
+                btn.onclick = (e) => {
+                    document.querySelectorAll('.proj-filter').forEach(b => {
+                        b.classList.remove('bg-luhye-navy', 'text-white');
+                        b.classList.add('bg-slate-100', 'text-slate-700');
+                    });
+                    e.target.classList.add('bg-luhye-navy', 'text-white');
+                    e.target.classList.remove('bg-slate-100', 'text-slate-700');
+                    renderProjects(e.target.getAttribute('data-proj'));
+                };
+            });
+
+            // Calculator Listeners
+            document.getElementById('calcMeters').oninput = calculateFence;
+            document.querySelectorAll('input[name="calcHeight"]').forEach(radio => {
+                radio.onchange = (e) => {
+                    document.querySelectorAll('.height-btn').forEach(btn => btn.classList.remove('border-luhye-blue', 'bg-blue-50'));
+                    e.target.closest('.height-btn').classList.add('border-luhye-blue', 'bg-blue-50');
+                    calculateFence();
+                };
+            });
+            document.getElementById('calcPlateType').onchange = calculateFence;
+
+            // Calculator WhatsApp Send
+            document.getElementById('sendCalcToWA').onclick = () => {
+                const c = window.currentCalcState;
+                const msg = `Hola *LUHYE E.I.R.L.*, utilicé la calculadora web:\n- *Metrado:* ${c.meters} metros lineales\n- *Altura:* ${c.height}\n- *Tipo de Placa:* ${c.plateType}\n- *Estimado Materiales:* ${c.plates} Placas y ${c.posts} Postes H.\n¿Podrían enviarme una cotización formal para mi obra?`;
+                window.open(`https://wa.me/51955404551?text=${encodeURIComponent(msg)}`, '_blank');
+            };
+
+            // Modal Close Listener
+            document.getElementById('closeModalBtn').onclick = closeModal;
+
+            // FAQ Accordion
+            document.querySelectorAll('.faq-btn').forEach(btn => {
+                btn.onclick = () => {
+                    const content = btn.nextElementSibling;
+                    const icon = btn.querySelector('i');
+                    const isHidden = content.classList.contains('hidden');
+
+                    document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                    document.querySelectorAll('.faq-btn i').forEach(i => i.style.transform = 'rotate(0deg)');
+
+                    if (isHidden) {
+                        content.classList.remove('hidden');
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                };
+            });
+
+            // Hero Form Submit to WhatsApp
+            document.getElementById('heroQuickForm').onsubmit = (e) => {
+                e.preventDefault();
+                const name = document.getElementById('hqName').value;
+                const phone = document.getElementById('hqPhone').value;
+                const meters = document.getElementById('hqMeters').value;
+                const loc = document.getElementById('hqLocation').value;
+                const msg = document.getElementById('hqMsg').value;
+
+                const text = `Hola *LUHYE E.I.R.L.*, solicito presupuesto:\n- *Nombre/Empresa:* ${name}\n- *Teléfono:* ${phone}\n- *Metros Lineales:* ${meters || 'Por definir'}\n- *Ubicación:* ${loc || 'No especificado'}\n- *Detalles:* ${msg || 'Sin comentarios'}`;
+                window.open(`https://wa.me/51955404551?text=${encodeURIComponent(text)}`, '_blank');
+            };
+
+            // Main Contact Form Submit to WhatsApp
+            document.getElementById('contactMainForm').onsubmit = (e) => {
+                e.preventDefault();
+                const name = document.getElementById('cmName').value;
+                const phone = document.getElementById('cmPhone').value;
+                const meters = document.getElementById('cmMeters').value;
+                const loc = document.getElementById('cmLocation').value;
+                const service = document.getElementById('cmService').value;
+                const msg = document.getElementById('cmMsg').value;
+
+                const text = `Hola *LUHYE E.I.R.L.*, envío consulta de cotización:\n- *Cliente:* ${name}\n- *Teléfono:* ${phone}\n- *Metrado:* ${meters} metros lineales\n- *Ubicación:* ${loc}\n- *Servicio:* ${service}\n- *Mensaje:* ${msg}`;
+                window.open(`https://wa.me/51955404551?text=${encodeURIComponent(text)}`, '_blank');
+            };
+        };
+    </script>
+</body>
+</html>
